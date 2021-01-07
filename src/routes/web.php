@@ -14,5 +14,6 @@
 */
 
 $router->get('/', function () use ($router) {
+    xdebug_info();
     return $router->app->version();
 });
