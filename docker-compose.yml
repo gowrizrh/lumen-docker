@@ -1,12 +1,5 @@
 version: '3.8'
 services:
-  web:
-    build:
-      context: build/nginx
-    ports:
-      - "8080:80"
-    volumes:
-      - ./src/public:/var/www/html/app/public
   php:
     build:
       context: build/php
@@ -19,3 +12,10 @@ services:
     volumes:
       - ./src:/var/www/html/app
     working_dir: /var/www/html/app
+  web:
+    build:
+      context: build/nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src/public:/var/www/html/app/public
