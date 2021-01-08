@@ -8,7 +8,10 @@
             "name": "XDebug",
             "type": "php",
             "request": "launch",
-            "port": 9003
+            "port": 9003,
+            "pathMappings": {
+                "/var/www/html/app": "${workspaceRoot}/src"
+            }
         }
     ]
 }
