@@ -13,6 +13,6 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->get('/', 'MainController@index');
+$router->get('/xd', 'MainController@xdebug');
+$router->get('/php', 'MainController@phpinfo');
